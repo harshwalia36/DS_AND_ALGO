@@ -1,0 +1,15 @@
+Let's be Lazy i.e., do work only when needed. How ? When we need to update an interval, we will update a node and mark its child that it needs to be updated and update it when needed.
+ For this we need an array lazy[] of the same size as that of segment tree. Initially all the elements of the lazy[] array will be 0 representing that there is no pending update. 
+If there is non-zero element lazy[k] then this element needs to update node k in the segment tree before making any query operation.
+
+To update an interval we will keep 3 things in mind.
+
+1) If current segment tree node has any pending update, then first add that pending update to current node.
+
+2) If the interval represented by current node lies completely in the interval to update, then update the current node and update the lazy[] array for children nodes.
+
+3) If the interval represented by current node overlaps with the interval to update, then update the nodes as the earlier update function
+
+Since we have changed the update function to postpone the update operation, we will have to change the query function also. 
+The only change we need to make is to check if there is any pending update operation on that node.
+If there is a pending update operation, first update the node and then work same as the earlier query function.
