@@ -1,0 +1,97 @@
+We have considered below facts in this article –
+
+0 based indexing of bits from left to right.
+Setting i-th bit means, turning i-th bit to 1
+Clearing i-th bit means, turning i-th bit to 0
+
+1) CLEAR ALL BITS FROM LSB(of x) TO iTh position
+
+   mask= ~((1<<i+1)-1)
+   x&=mask;
+   
+2) Clearing all bits from MSB to i-th bit
+		
+	mask=(1<<i+1)-1
+	x&=mask
+	
+3) Upper case English alphabet to lower case
+
+   ch |= ' ';
+   
+4) Lower case English alphabet to upper case
+
+   ch &= '_’ ;	
+   
+5) a.)Count set bits in integer
+   
+   int countSetBits(int x) 
+   { 
+       int count = 0; 
+       while (x) 
+       { 
+           x &= (x-1); 
+           count++; 
+       } 
+       return count; 
+   } 
+   Logic: This is Brian Kernighan’s algorithm.
+   
+   b.)Count unset bits in integer
+     count=total bits - countSetBits(x)
+	       (log2(x)+1)-countSetBits(x)
+
+6) Checking if given 32 bit integer is power of 2
+    
+    int isPowerof2(int x) 
+    { 
+        return (x && !(x & x-1)); 
+    } 
+    Logic: All the power of 2 have only single bit set e.g. 16 (00010000). 
+    If we minus 1 from this, all the bits from LSB to set bit get toggled, i.e., 16-1 = 15 (00001111). 
+    Now if we AND x with (x-1) and the result is 0 then we can say that x is power of 2 otherwise not. We have to take extra care when x = 0 
+
+7) Compute XOR from 1 to n (direct method) :
+   
+   // Direct XOR of all numbers from 1 to n 
+   int computeXOR(int n) 
+   { 
+       if (n % 4 == 0) 
+           return n; 
+       if (n % 4 == 1) 
+           return 1; 
+       if (n % 4 == 2) 
+           return n + 1; 
+       else							//n%4==3
+           return 0; 
+   } 	
+   
+8) We can quickly calculate the total number of combinations with numbers smaller than or equal to with a number whose sum and XOR are equal.
+  Instead of using looping (Brute force method), we can directly find it by a mathematical trick i.e.
+  // Refer Equal Sum and XOR for details.
+  Answer = pow(2, count of zero bits)   
+  
+9) Find XOR of all subsets of a set. We can do it in O(1) time. The answer is always 0 if given set has more than one elements. 
+   For set with single element, the answer is value of single element. 
+   
+10) The Quickest way to swap two numbers:
+    a ^= b;
+    b ^= a; 
+    a ^= b;
+	
+11) We can quickly check if bits in a number are in alternate pattern (like 101010). We compute n ^ (n >> 1).
+   If n has an alternate pattern, then n ^ (n >> 1) operation will produce a number having set bits only. ‘^’ is a bitwise XOR operation.	
+   
+12) Toggling a bit at nth position :   
+
+	void toggle(int &num,int pos) 
+    { 
+       num ^= (1 << pos); 
+    }
+	
+13) Getting lowest set bit of a number:
+
+	int lowest_set_bit(int num) 
+    { 
+       int ret = num & (-num); 
+       return ret; 
+    } 
