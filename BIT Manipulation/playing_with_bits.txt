@@ -1,0 +1,16 @@
+// To find the position  of the most significant set bit .
+    int k = (int)(log2(n)); 
+  
+  
+// XOR Trick
+   Suppose we insert 
+   A1, A2, A3 in an array and then ask to xor everything with X1, X2, X3 one by one 
+   Then it is the same as Xor-ing with X = XOR(x1, x2, x3).
+   
+   
+// TO FIND THE ith Bit is set or not of integer 'n'
+    int b=(n>>i)&1 
+	
+//RELATION B/W XOR , + , AND operations
+    a+b=(a XOR b) + (a AND b)*2
+      

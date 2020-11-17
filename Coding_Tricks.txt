@@ -1,0 +1,5 @@
+1. std::prev(m.end()) =  m.end()-1		//m is a map
+
+2. std::next(it) = it+1 ;		to increase the it by 1		// m is a map
+
+3. std::advance(it1, no. of steps)
