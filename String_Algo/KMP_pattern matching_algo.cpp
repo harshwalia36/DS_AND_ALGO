@@ -5,6 +5,8 @@
 using namespace std;
 
 //LPS- Longest prefix which is also a suffix.
+ /*lps[i] = the longest proper prefix of pat[0..i]
+              which is also a suffix of pat[0..i]. */
 
 string pat,text;
 ll *lps,m,n;
@@ -25,8 +27,11 @@ void computeLPSArray()
         {
             if(j!=0)
             {
+               // This is tricky. Consider the example.
+               // AAACAAAA and i = 7. The idea is similar
+               // to search step.
                 j=lps[j-1];
-                  // Also, note that we do not increment
+                // Also, note that we do not increment
                 // i here
             }
             else{ // if (j == 0)

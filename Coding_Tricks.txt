@@ -3,3 +3,5 @@
 2. std::next(it) = it+1 ;		to increase the it by 1		// m is a map
 
 3. std::advance(it1, no. of steps)
+
+4.ceil(float(sum)/(n-1)) = (sum+(n-2))/(n-1)

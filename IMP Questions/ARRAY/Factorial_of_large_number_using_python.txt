@@ -1,0 +1,8 @@
+t=int(input())
+fact = [1 for i in range(1001)]
+for i in range(2,1001):
+    fact[i]=i*fact[i-1];
+while(t):
+    n=int(input())
+    print(fact[n])
+    t=t-1
