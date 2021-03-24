@@ -5,3 +5,33 @@
 3. std::advance(it1, no. of steps)
 
 4.ceil(float(sum)/(n-1)) = (sum+(n-2))/(n-1)
+
+5.  int r[4]={-1,0,1,0};
+    int c[4]={0,-1,0,1};
+	
+6. TO print the value upto x decimal places
+  cout<<std::fixed<<std::setprecision(x)<<endl;
+  
+7. Conversion of integer or float variable into string
+    string strf = to_string(f_val);
+	
+8.  string::npos is a constant (probably -1 ) representing a non-position. 
+       It's returned by method find when the pattern was not found.	
+	 
+     string temp = str1 + str1;  
+      return (temp.find(str2) != string::npos);
+	  
+9.  SLICING Substr in c++
+     s.substr(pos,pos+len);   // s[pos:pos+len)	  
+	 
+	 
+10. WHEN WE DON'T KNOW THE VECTOR SIZE WE PUSH VECTOR
+   std::vector<std::vector<int>> normal;
+      for(int i=0; i<10; i++)
+     {
+        normal.push_back(std::vector<int>());
+       for(int j=0; j<20; j++)
+        {    
+        normal[i].push_back(j);    
+        }
+	 }
