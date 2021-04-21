@@ -39,7 +39,7 @@ int main()
     cin>>n>>edges;
 
     fors(i,MAXN)
-     dis[i]=1e18;
+     dis[i]=1e18;   //INF- 1e18
 
     for(int i=0;i<edges;i++)
     {
@@ -56,8 +56,10 @@ int main()
         {
           for(int j=0;j<adj[i].size();j++)
          {  int v=adj[i][j].first;
-            if(dis[v]>adj[i][j].second+dis[i])
+            if(dis[v]<INF)
+            {if(dis[v]>adj[i][j].second+dis[i])
                 dis[v]=adj[i][j].second+dis[i];
+            }
          }
         }
     }

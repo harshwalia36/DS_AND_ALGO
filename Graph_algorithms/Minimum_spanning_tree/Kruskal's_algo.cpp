@@ -31,6 +31,8 @@ pair <long long, pair<int, int> > p[MAX];
 
 //------------------------------------------------
 // ---------CODE HERE-----------------
+
+//Can also be done with min priority_queue
 void initialize()
 {
     fors(i,MAX)
@@ -71,7 +73,7 @@ int kruskal(pair <long long, pair<int, int> > p[])
         x=p[i].second.first;
         y=p[i].second.second;
         cost=p[i].first;
-          // Check if the selected edge is creating a cycle or not
+          // Check if the x and y are already visited
         if(find_set(x)!=find_set(y))
         {
          minimumCost+=cost;

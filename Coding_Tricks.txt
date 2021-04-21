@@ -35,3 +35,16 @@
         normal[i].push_back(j);    
         }
 	 }
+	 
+11. stable_sort(first,last)
+    Sorts the elements in the range [first,last) into ascending order, like sort, but stable_sort preserves the relative order of the elements with equivalent values.
+	
+12.    for (auto& x: mymap) {
+            std::cout << x.first << " => " << x.second << '\n';
+    }  
+	
+13.    vector<unordered_map<int, int>> freq(k, unordered_map<int, int>());
+        vector<vector<int>> dp(k, vector<int>(NUM_LIMIT, n + 1));
+		
+14.  NOTE- array is automatically passed by reference but we have to pass vectors explicitly as by reference.
+	 

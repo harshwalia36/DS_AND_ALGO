@@ -29,8 +29,9 @@ using namespace std;
 
 const int MAX = 1e4 + 5;
 typedef pair<long long, int> PII;
-bool marked[MAX];
+bool marked[MAX];          //set of MST as a boolean
 vector <PII> adj[MAX];
+
 
 long long prim(int x)
 {
@@ -43,7 +44,7 @@ long long prim(int x)
     {
         p=Q.top();
         Q.pop();
-          x = p.second;     //next vertex
+        x = p.second;     //next vertex
         // Checking for cycle
         if(marked[x] == true)
             continue;
