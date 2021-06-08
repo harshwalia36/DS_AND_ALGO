@@ -1,0 +1,50 @@
+*  Early prediction of the risk of severe coronavirus disease 2019: A key step in therapeutic decision making-  https://www.thelancet.com/journals/ebiom/article/PIIS2352-3964(20)30324-8/fulltext
+	 
+	 Image- https://els-jbs-prod-cdn.jbs.elsevierhealth.com/cms/attachment/9d2feae6-44ca-46f6-a315-69d68e93ee1b/gr1.jpg
+	- HNC-LL score also had a good predictive ability to identify those patients who were admitted to hospital with mild disease and progressed to a severe disease during their hospital stay.
+	- The timing of the risk stratification process in the course of the disease for each individual patient is critical. In the present study, the blood sampling and assessment of risk factors 
+		used to determine the HNC-LL risk score were performed on  the day of hospital admission. However, patients likely presented to the hospital at different stages of their
+		disease. The delay between the onset of symptoms and the medical examination is a key factor to consider as it provides an estimation of the stage of disease,
+		which was not taken into account in the study by Xiao et al. [[1]]
+		
+		
+* Prediction of COVID-19 Patients at High Risk of Progression to Severe Disease - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7732480/
+	Highlights
+    - The severity and mortality of COVID-19 patients urgently need to be resolved.
+    
+    - Comorbidity, ALB, CRP, and age ≥60 years are independent risk factors for severe COVID-19.
+    
+    - The COVID-19-AACC model is effective for screening patients at risk of severe disease.
+	When the clinical characteristics in the stable group and the severe group were compared, the results showed that age, comorbidity, lymphocyte count, albumin (ALB), D-dimer, 
+	C-reactive protein (CRP), and lactate dehydrogenase (LDH) levels were significantly different between the two groups.
+	
+* Towards an Artificial Intelligence Framework for Data-Driven Prediction of Coronavirus Clinical Severity	-
+   The objectives of this research are: 
+   (1) to algorithmically identify the combinations of clinical characteristics of COVID-19 that predict outcomes, and 
+   (2) to develop a tool with AI capabilities that will predict patients at risk for more severe illness on initial presentation.
+       The predictive models learn from historical data to help predict who will develop acute respiratory distress syndrome (ARDS), a severe outcome in COVID-19.
+	   
+	- Decision trees, a predictive analytics technique used in this study, have been previously used for pneumonia risk prediction.
+	- There are two major types of feature selection methods: filter methods and wrapper methods.
+	    Filter methods used in this study are based on entropy that is widely applied in information theory. In the case of this experiment, entropy is a metric that measures how
+		much information a feature encapsulates to help predict the final class label ARDS of the  sample. The higher the entropy of a feature, the more variance that feature exhibits, and
+		thus the more likely that feature contains valuable information for predicting the final label. In our case, the entropy of any discrete variable X is given by Bellaachia et al. [Bellaachia
+		and Bari (2012)] as:
+		𝐻𝐻(𝑋𝑋) = − ∑𝑎𝑎𝑎𝑎𝑎𝑎 𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝𝑝 𝑥𝑥 𝑃𝑃(𝑋𝑋 = 𝑥𝑥) ∙ ln (𝑃𝑃(𝑋𝑋 = 𝑥𝑥))
+		
+		Predictive features of ARDS in this order using feature selection
+			algorithms described in Section 4.
+			1. ALT
+			2. Myalgias
+			3. Hemoglobin
+			4. Gender
+			5. Temperature
+			6. Na+
+			7. K+
+			8. Lymphocyte Count
+			9. Creatinine
+			10. Age
+			11. White Blood Count
+   
+   Results-. The predictive models that learned from historical data of patients from these two hospitals achieved 70% to 80% accuracy in predicting severe cases.
+   

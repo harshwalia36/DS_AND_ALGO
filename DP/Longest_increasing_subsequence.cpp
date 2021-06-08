@@ -17,7 +17,8 @@ ll lis(vector<ll> v)
 ll lis(vector<ll> A) {
 	ll n = A.size();
     vector<ll> seq;
-    for(ll i = 0; i < n; i++) {
+    seq.push_back(A[0]);
+    for(ll i = 1; i < n; i++) {
         ll ind = lower_bound(seq.begin(), seq.end(), A[i]) - seq.begin();
         if(ind == seq.size()) {
             seq.push_back(A[i]);
