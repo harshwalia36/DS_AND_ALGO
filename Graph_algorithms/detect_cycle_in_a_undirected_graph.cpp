@@ -14,12 +14,12 @@ bool DFSCycle(int v,int par,int color[]){
     color[v]=1;  //marking as visited
     for(auto u:adj[v])
     {
-        if(color[u]==0)       // not visited
+        if(color[u]==0  && DFSCycle(u,v,color);)       // not visited
         {
-            DFSCycle(u,v,color);
-
+            
+                retur true;
         }
-        if(color[u]==1 && par!=u)  // if it is already visited cycle is there
+        if(color[u]==1 && par!=u)  // if it is already visited cycle is there and it is not parent also
         {
             return true;
         }

@@ -11,8 +11,6 @@
       if(r1==NULL || r2==NULL)
        return false;
 
-       return (r1->data==r2->data && ((isIsomorphic(r1->left,r2->left)&& isIsomorphic(r1->left,r2->left))||(isIsomorphic(r1->left,r2->right)&& isIsomorphic(r1->right,r2->left))));
-
-
+       return (r1->data==r2->data && ((isIsomorphic(r1->left,r2->left)&& isIsomorphic(r1->right,r2->right))||(isIsomorphic(r1->left,r2->right)&& isIsomorphic(r1->right,r2->left))));
 
     }

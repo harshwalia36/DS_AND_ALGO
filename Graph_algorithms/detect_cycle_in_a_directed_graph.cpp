@@ -13,14 +13,14 @@ bool DFSCycle(int v,int color[]){
     color[v]=1;  //marking as visited
     for(auto u:adj[v])
     {
-        if(color[u]==0)       // not visited
+        if(color[u]==0 && DFSCycle(u,color);)       // not visited
         {
-            DFSCycle(u,color);
+            return true;
 
         }
         if(color[u]==1)  // if it is already visited cycle is there
         {
-            return true;
+            return true;       //while backtracking child is already visited return true till source node once find cycle
         }
     }
     color[v]=2;  // if all children are visited mark as visited and exited

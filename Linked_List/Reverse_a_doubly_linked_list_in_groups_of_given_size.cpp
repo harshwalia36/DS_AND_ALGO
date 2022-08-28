@@ -57,7 +57,7 @@ Node *revListInGroupOfGivenSize(Node *head,int k)
      if(next != NULL)
     {
         head->next = revListInGroupOfGivenSize(next, k);
-        head->next->prev = head;
+        head->next->prev = head;       //head->next->prev= head of next reversed list
     }
    return prev;    //prev is newhead
 }

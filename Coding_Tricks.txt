@@ -41,10 +41,51 @@
 	
 12.    for (auto& x: mymap) {
             std::cout << x.first << " => " << x.second << '\n';
-    }  
+       }  
 	
-13.    vector<unordered_map<int, int>> freq(k, unordered_map<int, int>());
-        vector<vector<int>> dp(k, vector<int>(NUM_LIMIT, n + 1));
+13.   * vector<unordered_map<int, int>> freq(k, unordered_map<int, int>());      // vector of unordered map
+			mapping=[[l,h],....]
+	  * unordered_map<char,unordered_map<char,char>> um;			//um[mapping[i][0]][mapping[i][1]]=1    this is for mapping when there are more the 1 'l' in mapping
+      * vector<vector<int>> dp(n, vector<int>(m, 0));      // means- dp[n][m]=0
 		
 14.  NOTE- array is automatically passed by reference but we have to pass vectors explicitly as by reference.
+
+15.  Sort the First element by Increasing and second element by decreasing
+
+    static bool comp(const pair<int, int> &a, const pair<int, int> &b) {
+    if (a.first != b.first) {
+      return a.first < b.first;
+    }
+    return a.second > b.second;
+  }
 	 
+16.  How to create an unordered_map of pairs in C++?
+
+	  
+	// A hash function used to hash a pair of any kind
+	struct hash_pair {
+		template <class T1, class T2>
+		size_t operator()(const pair<T1, T2>& p) const
+		{
+			auto hash1 = hash<T1>{}(p.first);
+			auto hash2 = hash<T2>{}(p.second);
+			return hash1 ^ hash2;
+		}
+	};
+	
+	// Sending the hash function as a third argument
+    unordered_map<pair<int, int>, bool, hash_pair> um;
+	
+17. stoi() - The stoi() function takes a string as an argument and returns its value. example:
+			
+			stoi("45") is 45
+			stoi("3.14159") is 3
+			stoi("31337 geek") is 31337
+			
+18. Which problem can be solved by Sliding Window?
+	
+	Above is the specific problem that can be solved by two pinters. Now let's generalize the characteristics of the problems that can be solved by two pinters.
+	The summary is simple:
+
+	* If a wider scope of the sliding window is valid, the narrower scope of that wider scope is valid mush hold.
+	* If a narrower scope of the sliding window is invalid, the wider scope of that narrower scope is invalid mush hold.

@@ -13,7 +13,7 @@ using namespace std;
 //------------------------------------------------
 // ---------CODE HERE-----------------
 
-ll lis(vector<ll> v)
+
 ll lis(vector<ll> A) {
 	ll n = A.size();
     vector<ll> seq;

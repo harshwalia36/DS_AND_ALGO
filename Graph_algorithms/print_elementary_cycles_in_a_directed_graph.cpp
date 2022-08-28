@@ -40,7 +40,7 @@ void printcycle(vector <int> v,int start)
   {
       if(v[i]==start)
         flag=1;
-      if(flag==1)
+      if(flag==1)      //not to print extra vertex not present in cycle
       cout<<v[i]<<" ";
   }
   cout<<endl;

@@ -1,8 +1,4 @@
-ne
-edit
-play_arrow
 
-brightness_4
 // Counts Palindromic Subsequence in a given String
 #include <cstring>
 #include <iostream>

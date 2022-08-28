@@ -50,7 +50,7 @@ void Rabin_Karp()
 
         // Check the hash values of current window of text
         // and pattern. If the hash values match then only
-        // check for characters on by one
+        // check for characters one by one
         if ( p == t )
         {
             /* Check for characters one by one */
